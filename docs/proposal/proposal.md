@@ -56,7 +56,7 @@ The idea for this project came from the increasing need to protect personal data
 
 The final application will allow the user to:
 
-*upload an image via the web application.
+* upload an image via the web application.
 *automatically detect peoples faces and license plates in images.
 * display the detected objects with bounding boxes.
 * allow the user to manually modify/remove any bounding box before blurring is applied.
@@ -102,7 +102,7 @@ Object detection: Yolov8 - Yolov8 is an object detection model developed by Ultr
 
 Image processing: OpenCV - OpenCV will be used to apply blur to selected regions of the image based on given bounding box coordinates.
 
-Backend: Flask.
+Backend: Flask (Python based web-framework).
 
 Frontend: html,css,javascript.
 
