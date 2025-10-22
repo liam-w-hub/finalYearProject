@@ -130,6 +130,10 @@ I will be responsible for image processing and developing the frontend of the ap
 
 The frontend will be a simple web page where users can upload an image and see the detected boxes around faces and plates. They can move, resize, or remove boxes to make sure the blur is correct. After they confirm, the image is processed and shown with the blurred areas.
 
+### Work done together
+
+We will both be working on the dataset preparation. This will involve cleaning the datasets by removing low-quality or duplicate images, correcting any innacuarate labels and ensuring consistent formatting. This will help improve the quality of the training data.
+
 ### Risk Register
 
 | Description                  | Likelihood | Severity | Mitigation |
