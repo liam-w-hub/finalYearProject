@@ -547,7 +547,7 @@ Main tasks:
 	
 **Finalising the system:**
 
-This stage consists of concluding the project by performing final system testing, bug fixing and completing the report, technical specification and videowalkthrough. 
+This stage consists of concluding the project by performing final system testing, bug fixing and completing the report, technical specification and video walkthrough. 
 	
 Dependencies between tasks:
 	
