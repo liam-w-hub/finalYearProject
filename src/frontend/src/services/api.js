@@ -9,6 +9,11 @@ const API_BASE = "http://localhost:5000";
 export async function detectImage(file) {
   // Backend not implemented yet
   // This function defines the client–server contract
+  return {
+    boxes: [
+      { x: 100, y: 80, w: 60, h: 60, label: "face", conf: 0.9 }
+    ]
+  };
 }
 
 /**
