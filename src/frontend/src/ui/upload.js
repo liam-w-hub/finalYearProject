@@ -4,14 +4,15 @@ export function initUpload({ onFileSelected }) {
   const status = document.getElementById("status");
 
   if (!input) throw new Error("Missing #imageInput in index.html");
+  if (!preview) throw new Error("Missing #preview in index.html");
+  if (!status) throw new Error("Missing #status in index.html");
 
   input.addEventListener("change", () => {
     const file = input.files?.[0];
     if (!file) return;
 
-    status.textContent = `Status: Selected ${file.name}`;
+    status.textContent = `Status: Selected ${file.name || "(unnamed file)"}`;
 
-    // show preview
     const url = URL.createObjectURL(file);
     preview.src = url;
     preview.style.display = "block";
