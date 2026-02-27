@@ -1,45 +1,62 @@
 import { detectImage } from "./services/api.js";
 import { initUpload } from "./ui/upload.js";
 import { initCanvas, drawBoxes } from "./ui/canvas.js";
+import { initEditor } from "./ui/editor.js";
 
 let selectedFile = null;
+let boxes = [];
 
 document.addEventListener("DOMContentLoaded", () => {
+  const detectBtn = document.getElementById("detectBtn");
+  const output = document.getElementById("output");
 
-    const detectBtn = document.getElementById("detectBtn");
-    const output = document.getElementById("output");
+  console.log("Frontend initialised");
 
-    console.log("Frontend initialised");
+  initCanvas();
 
-    initCanvas();
+  initUpload({
+    onFileSelected: (file) => {
+      selectedFile = file;
+      detectBtn.disabled = false;
 
-    initUpload({
-        onFileSelected: (file) => {
-        selectedFile = file;
+      boxes = [];                 // reset boxes when new image selected
+      drawBoxes(boxes);
 
-        // enable detect
-        detectBtn.disabled = false;
+      output.textContent = "";
+    },
+  });
 
-        // safe logging
-        console.log("Selected file:", file);
+  // Initialize editor
+  initEditor({
+    getBoxes: () => boxes,
+    setBoxes: (newBoxes) => {
+      boxes = newBoxes;
+    },
+    onChange: (currentBoxes, tempBox) => {
+      drawBoxes(currentBoxes);
 
-        // clear output and overlay (optional)
-        output.textContent = "";
-        // drawBoxes([]);  // only if you already imported it
-        },
-    });
+      // If dragging, draw temporary preview box
+      if (tempBox) {
+        drawBoxes([...currentBoxes, tempBox]);
+      }
+    }
+  });
 
-    detectBtn.addEventListener("click", async () => {
-        if (!selectedFile) return;
+  detectBtn.addEventListener("click", async () => {
+    if (!selectedFile) return;
 
     output.textContent = "Detecting...";
-        try {
-            const result = await detectImage(selectedFile);
-            output.textContent = JSON.stringify(result, null, 2);
-            drawBoxes(result.boxes || []);
-        } catch (err) {
-            console.error(err);
-            output.textContent = "Detection failed";
-        }
-    });
+
+    try {
+      const result = await detectImage(selectedFile);
+
+      boxes = result.boxes || [];
+      drawBoxes(boxes);
+
+      output.textContent = JSON.stringify(result, null, 2);
+    } catch (err) {
+      console.error(err);
+      output.textContent = "Detection failed";
+    }
+  });
 });

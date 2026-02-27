@@ -3,18 +3,15 @@
 <input id="imageInput" type="file" accept="image/*" />
 <p id="status">Status: Idle</p>
 
-<img id="preview" alt="Preview" style="max-width: 500px; display:none;" />
-
-<pre id="output"></pre>
-
-<button id="detectBtn" disabled>Detect</button>
-<pre id="output"></pre>
-
 <div style="position: relative; display: inline-block;">
-  <img id="preview" style="max-width:700px; display:none;">
+  <img id="preview" alt="Preview" style="max-width: 700px; display:none;" />
   <canvas id="overlay"
-          style="position:absolute; left:0; top:0; pointer-events:none;">
+          style="position:absolute; left:0; top:0; pointer-events:auto; cursor:crosshair;">
   </canvas>
 </div>
+
+<button id="detectBtn" disabled>Detect</button>
+
+<pre id="output"></pre>
 
 <script type="module" src="./src/main.js"></script>
