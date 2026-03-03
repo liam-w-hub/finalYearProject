@@ -1,19 +1,28 @@
 // frontend/src/services/api.js
 
-const API_BASE = "http://localhost:5000";
+//const API_BASE = "http://localhost:5000";
+const API_BASE = "http://127.0.0.1:5000";
 
 /**
  * Sends an image to the backend for object detection.
  * Expected to return bounding boxes in original image pixel coordinates.
  */
+
 export async function detectImage(file) {
-  // Backend not implemented yet
-  // This function defines the client–server contract
-  return {
-    boxes: [
-      { x: 100, y: 80, w: 60, h: 60, label: "face", conf: 0.9 }
-    ]
-  };
+  const form = new FormData();
+  form.append("image", file);
+  //form.append("type", type);
+
+  const res = await fetch(`${API_BASE}/detect`, {
+    method: "POST",
+    body: form,
+  });
+
+  if (!res.ok) {
+    throw new Error(`Detect failed: ${res.status}`);
+  }
+
+  return await res.json();
 }
 
 /**
