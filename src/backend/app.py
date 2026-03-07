@@ -62,16 +62,23 @@ def detect():
 
 
 def facePredict():
-    count = 1
+    resultsArray = []
+    facesDetected = []
     for model in faceModels:
         model = YOLO(model)
         testImage = "C:/Users/liamw/2026-csc1097-wraftel-3-clarkt-26/src/backend/faceTest.jpg"
-        results = model.predict(testImage, conf=0.5)
-        finalImage = plot_bboxes(results)
-        cv2.imwrite(f"faceOutput{count}.jpg", finalImage)
-        count += 1
+        results = model.predict(testImage, conf=0.55)
+        num = len(results[0].boxes)
+        facesDetected.append(num)
+        if (num != 0):
+            resultsArray.append(results)
 
-    return "face test"
+    facesCount = max(facesDetected)
+    finalResult = finalBox(resultsArray, facesCount)
+    finalImage = plot_bboxes(finalResult)
+    cv2.imwrite(f"faceCombined.jpg", finalImage)
+
+    return facesDetected
 
 def platePredict():
     count = 1
@@ -87,12 +94,38 @@ def platePredict():
 
 def plot_bboxes(results):
 
-    image = results[0].orig_img
-    boxesFound = results[0].boxes.xyxy.numpy().astype(np.int32)
-    for bbox in boxesFound:
-        image = cv2.rectangle(image, (bbox[0], bbox[1]), (bbox[2], bbox[3]), color=(0, 0, 255), thickness=1)
+    image = cv2.imread("faceTest.jpg")
+    for bbox in results:
+        image = cv2.rectangle(image, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color=(0, 0, 255), thickness=1)
 
     return image
+
+def finalBox(resultsArray, facesCount):
+    num = len(resultsArray)
+    coordinates = []
+
+    for i in range(facesCount):
+        bbox0 = 0
+        bbox1 = 0
+        bbox2 = 0
+        bbox3 = 0
+        for results in resultsArray:
+            boxesFound = results[0].boxes.xyxy.numpy().astype(np.int32)
+            boxesFound = sorted(boxesFound, key=lambda x: x[0])
+            bbox0 += boxesFound[i][0]
+            bbox1 += boxesFound[i][1]
+            bbox2 += boxesFound[i][2]
+            bbox3 += boxesFound[i][3]
+
+        bbox0 = bbox0 / num
+        bbox1 = bbox1 / num
+        bbox2 = bbox2 / num
+        bbox3 = bbox3 / num
+
+        box = [bbox0, bbox1, bbox2, bbox3]
+        coordinates.append(box)
+
+    return coordinates
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
