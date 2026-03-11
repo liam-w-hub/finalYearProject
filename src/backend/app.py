@@ -7,7 +7,7 @@ app = Flask(__name__)
 #face_model = YOLO("faceBestA.pt")
 #plate_model = YOLO("plateBestA.pt")
 faceModels = ['faceBestA.pt', 'faceBestB.pt', 'faceBestC.pt', 'faceBestB.pt']
-#plateModels = ['plateBestA.pt', 'plateBestB.pt', 'plateBestC.pt', 'plateBestD.pt']
+plateModels = ['plateBestA.pt', 'plateBestB.pt', 'plateBestC.pt', 'plateBestD.pt']
 
 @app.after_request
 def add_cors_headers(resp):
@@ -37,10 +37,41 @@ def detect():
     #plate_results = plate_model.predict(img, conf=0.5, verbose=False)
 
     face_detected, final_result = facePredict(img)
+    plate_detected, plate_result = platePredict(img)
 
-    return jsonify({"face_detected": face_detected,
-                    "final_result": final_result
-                    })
+    boxes = []
+
+    # face boxes
+    for bbox in final_result:
+        x1, y1, x2, y2 = bbox
+        boxes.append({
+            "x": int(x1),
+            "y": int(y1),
+            "w": int(x2 - x1),
+            "h": int(y2 - y1),
+            "label": "face"
+        })
+
+    # plate boxes
+    for bbox in plate_result:
+        x1, y1, x2, y2 = bbox
+        boxes.append({
+            "x": int(x1),
+            "y": int(y1),
+            "w": int(x2 - x1),
+            "h": int(y2 - y1),
+            "label": "plate"
+        })
+
+    h, w = img.shape[:2]
+
+    return jsonify({
+        "width": int(w),
+        "height": int(h),
+        "boxes": boxes,
+        "face_detected": face_detected,
+        "plate_detected": plate_detected
+    })
 
     '''
     boxes = []
@@ -88,17 +119,24 @@ def facePredict(image):
 
     return facesDetected, finalResult
 
-def platePredict():
-    count = 1
+def platePredict(image):
+    resultsArray = []
+    platesDetected = []
     for model in plateModels:
         model = YOLO(model)
-        testImage = "C:/Users/liamw/2026-csc1097-wraftel-3-clarkt-26/src/backend/licensePlateTest.jpg"
-        results = model.predict(testImage, conf=0.5)
-        finalImage = plot_bboxes(results)
-        cv2.imwrite(f"plateOutput{count}.jpg", finalImage)
-        count += 1
+        results = model.predict(image, conf=0.5)
+        num = len(results[0].boxes)
+        platesDetected.append(num)
+        if num != 0:
+            resultsArray.append(results)
 
-    return "plate test"
+    if not resultsArray:
+        return platesDetected, []
+
+    platesCount = max(platesDetected)
+    finalResult = finalBox(resultsArray, platesCount)
+
+    return platesDetected, finalResult
 
 def plot_bboxes(results):
 

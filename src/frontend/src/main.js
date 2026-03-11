@@ -50,9 +50,24 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await detectImage(selectedFile);
 
-      boxes = result.boxes || [];
-      drawBoxes(boxes);
+      if (result.boxes) {
+        boxes = result.boxes;
+      } else if (result.final_result) {
+        boxes = result.final_result.map((bbox) => {
+          const [x1, y1, x2, y2] = bbox;
+          return {
+            x: x1,
+            y: y1,
+            w: x2 - x1,
+            h: y2 - y1,
+            label: "face"
+          };
+        });
+      } else {
+        boxes = [];
+      }
 
+      drawBoxes(boxes);
       output.textContent = JSON.stringify(result, null, 2);
     } catch (err) {
       console.error(err);
