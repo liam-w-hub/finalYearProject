@@ -1,0 +1,1153 @@
+testImages/images/1--104-_jpg.rf.4830cbb83d5903a1869ce29b83e8c1f2.jpg
+actual coordinates
+[[162.25, 19.00000000000002, 537.75, 333.0]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(170.0), np.float64(33.666666666666664), np.float64(518.6666666666666), np.float64(329.6666666666667)]]
+intersect
+0.87565926769114
+mean intersection over union
+0.87565926769114
+testImages/images/1--117-_jpg.rf.2c7f198849f305e562921e8001b7d1c3.jpg
+actual coordinates
+[[134.00000000000003, 102.74999999999999, 515.0, 462.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(129.5), np.float64(115.5), np.float64(515.25), np.float64(462.0)]]
+intersect
+0.952521901204869
+mean intersection over union
+0.9140905844480045
+testImages/images/1--133-_png.rf.b87bc2fdffe5063cbea47ebabb2b0658.jpg
+actual coordinates
+[[166.5, 139.25, 446.5, 461.75]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(165.25), np.float64(154.5), np.float64(445.5), np.float64(472.75)]]
+intersect
+0.91446976765438
+mean intersection over union
+0.9142169788501296
+testImages/images/1--144-_jpg.rf.463350b6a469d3d289bcb8d48a833a9a.jpg
+actual coordinates
+[[68.24999999999996, 63.75, 597.75, 575.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(48.5), np.float64(77.25), np.float64(608.75), np.float64(607.75)]]
+intersect
+0.8666083677854624
+mean intersection over union
+0.9023148260839629
+testImages/images/1--17-_jpg.rf.0d17a89e04469bbdffc79f3c68f3b389.jpg
+actual coordinates
+[[67.5, 64.75000000000001, 534.5, 470.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(82.5), np.float64(72.25), np.float64(544.5), np.float64(511.5)]]
+intersect
+0.8472618223111296
+mean intersection over union
+0.8913042253293962
+testImages/images/1--208-_jpg.rf.a00b03a986e9add96d571c75a592ef28.jpg
+actual coordinates
+[[73.75, 104.75000000000001, 366.25, 487.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(83.75), np.float64(110.0), np.float64(379.0), np.float64(478.75)]]
+intersect
+0.8938580058571318
+mean intersection over union
+0.8917298554173522
+testImages/images/1--25-_jpeg.rf.9c6e4235d1c118c43d7e46f7edd30abb.jpg
+actual coordinates
+[[223.5, 120.99999999999997, 416.5, 402.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(219.0), np.float64(134.25), np.float64(436.0), np.float64(401.5)]]
+intersect
+0.8510859254898113
+mean intersection over union
+0.8859235797134177
+testImages/images/1--251-_jpg.rf.43c633208db1879a732b5149b8ff68b8.jpg
+actual coordinates
+[[163.75000000000003, 86.74999999999997, 480.25000000000006, 411.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(180.33333333333334), np.float64(147.33333333333334), np.float64(468.6666666666667), np.float64(401.0)]]
+intersect
+0.7129775444736075
+mean intersection over union
+0.8643053253084414
+testImages/images/1--28-_jpeg.rf.3d7cef196b6b339300016632083011ae.jpg
+actual coordinates
+[[224.5, 54.750000000000014, 548.5, 366.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(221.0), np.float64(86.5), np.float64(557.5), np.float64(429.0)]]
+intersect
+0.7227227722772277
+mean intersection over union
+0.8485739305271954
+testImages/images/1--31-_jpeg.rf.4f39e5e2b24f4260558fd9dd1fa479e5.jpg
+actual coordinates
+[[151.0, 11.000000000000014, 434.0, 484.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(145.0), np.float64(22.25), np.float64(448.0), np.float64(483.0)]]
+intersect
+0.9116168813564035
+mean intersection over union
+0.8548782256101163
+testImages/images/1--351-_jpg.rf.ce2938086602eeb5e5bff00fed7a5661.jpg
+actual coordinates
+[[151.5, 18.000000000000007, 447.5, 378.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(159.75), np.float64(25.5), np.float64(412.25), np.float64(368.75)]]
+intersect
+0.8139322588768572
+mean intersection over union
+0.8511558649980018
+testImages/images/1--356-_jpg.rf.14eb1ecb4376f8517dc5973b0818b9c7.jpg
+actual coordinates
+[[41.000000000000014, 23.75, 616.0, 540.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(26.5), np.float64(19.5), np.float64(616.5), np.float64(552.0)]]
+intersect
+0.9453898448612981
+mean intersection over union
+0.8590086966532765
+testImages/images/1--380-_jpg.rf.c0c2ed835e4b9adf0fdc6a0f6be89d0d.jpg
+actual coordinates
+[[102.99999999999999, 78.75, 405.0, 456.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(126.33333333333333), np.float64(102.0), np.float64(430.0), np.float64(416.3333333333333)]]
+intersect
+0.7194995646437217
+mean intersection over union
+0.8482772249602337
+testImages/images/1--421-_jpg.rf.47ca8463c154ddf25af714df254751c7.jpg
+actual coordinates
+[[126.00000000000001, 96.75, 551.0, 475.25000000000006]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(138.66666666666666), np.float64(121.33333333333333), np.float64(504.3333333333333), np.float64(472.0)]]
+intersect
+0.7975928571968577
+mean intersection over union
+0.8446569129771354
+testImages/images/1--427-_jpg.rf.d1709a4d30dc1a5f2293470ee683d1ce.jpg
+actual coordinates
+[[86.75, 93.75, 445.25000000000006, 456.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(56.333333333333336), np.float64(83.66666666666667), np.float64(491.3333333333333), np.float64(467.0)]]
+intersect
+0.7798458548501319
+mean intersection over union
+0.8403361757686685
+testImages/images/1--442-_jpg.rf.6b67428502ad27dd4ff8db7a8c134150.jpg
+actual coordinates
+[[89.00000000000003, 105.5, 503.0, 479.5]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(114.25), np.float64(137.5), np.float64(501.25), np.float64(514.75)]]
+intersect
+0.7860745886049781
+mean intersection over union
+0.8369448265709378
+testImages/images/1--468-_jpg.rf.bb2a048e6b1856671a49f0959da0ab5d.jpg
+actual coordinates
+[[183.75, 65.99999999999997, 390.25, 262.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(169.0), np.float64(60.25), np.float64(399.75), np.float64(257.75)]]
+intersect
+0.8530716605256565
+mean intersection over union
+0.8378934638623919
+testImages/images/1--47-_jpg.rf.7659a14b82bc2340141a1de149b9905e.jpg
+actual coordinates
+[[110.99999999999997, 108.0, 542.0, 487.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(107.5), np.float64(106.75), np.float64(532.75), np.float64(498.75)]]
+intersect
+0.9392727937145989
+mean intersection over union
+0.8435256488541811
+testImages/images/1--498-_jpg.rf.dc2ec969547e7b85d9bbf418c8dfa3ac.jpg
+actual coordinates
+[[301.0, 47.000000000000014, 495.0, 324.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(302.75), np.float64(54.25), np.float64(507.0), np.float64(318.0)]]
+intersect
+0.8915422918082493
+mean intersection over union
+0.8460528405886057
+testImages/images/1--532-_jpg.rf.5432debfd6726ebdc8ca29b215e4922e.jpg
+actual coordinates
+[[199.25000000000006, 58.999999999999986, 569.75, 344.0]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(193.0), np.float64(82.0), np.float64(534.0), np.float64(373.6666666666667)]]
+intersect
+0.7480784911734492
+mean intersection over union
+0.8411541231178479
+testImages/images/1--546-_jpg.rf.e6a7ef0fd79572a50f08961eb8186347.jpg
+actual coordinates
+[[113.99999999999999, 42.24999999999998, 459.0, 456.75]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(87.0), np.float64(52.25), np.float64(481.25), np.float64(492.5)]]
+intersect
+0.7888215192431017
+mean intersection over union
+0.8386620943619075
+testImages/images/1--562-_jpg.rf.e093f0c5634729075db31dd9a00d7418.jpg
+actual coordinates
+[[263.5, 85.75000000000003, 446.5, 581.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(269.0), np.float64(121.0), np.float64(449.0), np.float64(564.3333333333334)]]
+intersect
+0.8577507971326654
+mean intersection over union
+0.8395297626696693
+testImages/images/1--623-_jpg.rf.98c699e9e1c2280d1514c2629179171a.jpg
+actual coordinates
+[[123.0, 9.50000000000001, 387.0, 208.5]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(147.0), np.float64(0.3333333333333333), np.float64(394.0), np.float64(208.66666666666666)]]
+intersect
+0.8498683468121122
+mean intersection over union
+0.8399792663280364
+testImages/images/1--670-_jpg.rf.56a6af45dca2d9e5616a52040446a81a.jpg
+actual coordinates
+[[220.75000000000003, 102.74999999999999, 526.25, 432.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(194.66666666666666), np.float64(104.0), np.float64(544.3333333333334), np.float64(447.6666666666667)]]
+intersect
+0.8323155277786973
+mean intersection over union
+0.8396599438884805
+testImages/images/1--680-_jpg.rf.356b98248d7f423e8e5c3868d6d0ebf5.jpg
+actual coordinates
+[[179.25, 125.75000000000001, 456.75, 356.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(161.0), np.float64(85.0), np.float64(444.5), np.float64(352.75)]]
+intersect
+0.7566642828095859
+mean intersection over union
+0.8363401174453248
+testImages/images/1--718-_jpg.rf.9bb7871faecd9ffa1762ebe46cabb065.jpg
+actual coordinates
+[[86.25, 97.00000000000003, 527.75, 480.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(113.25), np.float64(106.0), np.float64(518.25), np.float64(472.5)]]
+intersect
+0.8780896892655368
+mean intersection over union
+0.8379458702076406
+testImages/images/1--735-_jpg.rf.efed9bd913d40c60f05630d713f92438.jpg
+actual coordinates
+[[122.25000000000001, 43.999999999999986, 534.75, 419.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(153.5), np.float64(99.0), np.float64(482.5), np.float64(409.0)]]
+intersect
+0.6601018806761172
+mean intersection over union
+0.831359055780547
+testImages/images/1--740-_jpg.rf.a4744ce557c53f6af314c6284e256613.jpg
+actual coordinates
+[[158.49999999999997, 114.00000000000003, 559.5, 462.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(171.5), np.float64(129.25), np.float64(518.25), np.float64(438.0)]]
+intersect
+0.7677626373861353
+mean intersection over union
+0.8290877551236038
+testImages/images/1--748-_jpg.rf.e036cdbcf16343f34a90e0c2ee354d5b.jpg
+actual coordinates
+[[171.0, 77.75000000000003, 464.0, 369.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(168.5), np.float64(85.0), np.float64(471.0), np.float64(373.5)]]
+intersect
+0.9318710258098389
+mean intersection over union
+0.8326320058369222
+testImages/images/1--754-_jpg.rf.891de32584623c78880a06a56181067b.jpg
+actual coordinates
+[[96.75, 127.5, 510.25000000000006, 549.5]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(88.0), np.float64(115.25), np.float64(527.5), np.float64(580.5)]]
+intersect
+0.8536899027123093
+mean intersection over union
+0.8333339357327685
+testImages/images/1--756-_jpg.rf.9b09c4b6d7301892c62b4a4900505db7.jpg
+actual coordinates
+[[90.99999999999997, 146.0, 453.0, 444.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(94.25), np.float64(123.25), np.float64(490.25), np.float64(477.75)]]
+intersect
+0.7569407182352517
+mean intersection over union
+0.8308696383941389
+testImages/images/1--810-_jpg.rf.3e231deb5a1d88020d5943c43e2b7d96.jpg
+actual coordinates
+[[131.0, 37.5, 486.0, 406.5]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(130.25), np.float64(49.75), np.float64(490.75), np.float64(401.5)]]
+intersect
+0.939539746801823
+mean intersection over union
+0.834265579281879
+testImages/images/1--891-_jpg.rf.e3babbc7d69c985e6d065610144aaf7f.jpg
+actual coordinates
+[[63.75, 77.00000000000003, 570.25, 470.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(53.0), np.float64(72.25), np.float64(568.75), np.float64(497.0)]]
+intersect
+0.9037462775073473
+mean intersection over union
+0.8363710549856812
+testImages/images/1--90-_jpg.rf.ff610c17d45167e01b32d5a829ebe78a.jpg
+actual coordinates
+[[81.50000000000003, 71.75, 554.5, 422.24999999999994]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(127.66666666666667), np.float64(100.33333333333333), np.float64(486.0), np.float64(399.6666666666667)]]
+intersect
+0.6477350101600603
+mean intersection over union
+0.8308229360202217
+testImages/images/1--900-_jpg.rf.c29a024c9f5e18f24163c3ca763edb13.jpg
+actual coordinates
+[[138.75, 86.00000000000001, 417.25, 365.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(151.5), np.float64(130.5), np.float64(447.5), np.float64(443.5)]]
+intersect
+0.5779260729518726
+mean intersection over union
+0.823597311361126
+testImages/images/1_mp4-0000_jpg.rf.854ca1a57d79817fbd173e6d575636e1.jpg
+actual coordinates
+[[406.67000000000013, 483.33000000000004, 710.51, 939.97]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(389.6666666666667), np.float64(489.3333333333333), np.float64(722.3333333333334), np.float64(936.0)]]
+intersect
+0.8953820008416755
+mean intersection over union
+0.8255913305133635
+testImages/images/a_gp_0_ef_02_jpg.rf.260de6c2feab07fa3823a11686f5089b.jpg
+actual coordinates
+[[8.049999999999999, 4.804999999999998, 29.63, 29.994999999999997]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(7.0), np.float64(5.0), np.float64(28.5), np.float64(29.0)]]
+intersect
+0.8682520422745246
+mean intersection over union
+0.8267443227231246
+testImages/images/a_gp_0_ef_05_jpg.rf.816e753edc882864fe8000e1cfd8d099.jpg
+actual coordinates
+[[6.685, 4.669999999999998, 30.475, 31.47]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(7.0), np.float64(4.5), np.float64(29.5), np.float64(30.5)]]
+intersect
+0.9096135507540135
+mean intersection over union
+0.8289250918818322
+testImages/images/a_gp_0_ef_13_jpg.rf.9c09e625530a56012b7fc20fcfeb1aa8.jpg
+actual coordinates
+[[7.200000000000004, 5.000000000000001, 40.0, 41.7]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(6.0), np.float64(3.75), np.float64(41.25), np.float64(43.25)]]
+intersect
+0.8679506172839505
+mean intersection over union
+0.8299257463793225
+testImages/images/a_gp_0_ef_16_jpg.rf.89ebbc74e075beb7aea256b7adc28085.jpg
+actual coordinates
+[[7.945000000000001, 6.089999999999999, 47.815, 52.910000000000004]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(10.0), np.float64(6.5), np.float64(45.5), np.float64(50.0)]]
+intersect
+0.8310720294489867
+mean intersection over union
+0.8299544034560642
+testImages/images/a_gp_0_ef_21_jpg.rf.177ef6658bc15da3f90e4c5fbe8fad15.jpg
+actual coordinates
+[[10.005000000000003, 7.109999999999999, 65.335, 68.11]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(8.5), np.float64(5.5), np.float64(66.25), np.float64(70.75)]]
+intersect
+0.8973000401445203
+mean intersection over union
+0.8315969799606607
+testImages/images/a_gp_0_ef_25_jpg.rf.825104e111b9f857aa67f08197c35f41.jpg
+actual coordinates
+[[14.249999999999996, 14.005000000000006, 92.09, 105.89500000000001]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(11.75), np.float64(8.0), np.float64(95.75), np.float64(105.5)]]
+intersect
+0.8677554295567427
+mean intersection over union
+0.8324578954272341
+testImages/images/a_gp_0_ef_29_jpg.rf.1b7b4e3838f51caf7a21ca0b6ada744b.jpg
+actual coordinates
+[[21.659999999999993, 18.055000000000007, 162.5, 171.94499999999996]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(19.25), np.float64(10.0), np.float64(168.25), np.float64(184.75)]]
+intersect
+0.8333654850640111
+mean intersection over union
+0.8324790021629732
+testImages/images/a_gp_3_ef_03_jpg.rf.dbc9ad873f0140403099383ddbbb20c2.jpg
+actual coordinates
+[[8.524999999999999, 8.340000000000002, 27.054999999999996, 32.4]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(8.0), np.float64(8.0), np.float64(26.5), np.float64(32.0)]]
+intersect
+0.9193026774352687
+mean intersection over union
+0.8344522675100708
+testImages/images/a_gp_3_ef_04_jpg.rf.53ac63c529ac7372cf0050eb1d55d4d0.jpg
+actual coordinates
+[[8.900000000000004, 6.399999999999999, 27.8, 29.999999999999996]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(8.5), np.float64(6.5), np.float64(28.0), np.float64(30.5)]]
+intersect
+0.9476374662286923
+mean intersection over union
+0.8369674941482624
+testImages/images/a_gp_3_ef_06_jpg.rf.0844f9b6a0e6147bcd8f05b59fdd9079.jpg
+actual coordinates
+[[6.87, 8.155, 29.29, 35.084999999999994]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(6.0), np.float64(8.0), np.float64(29.0), np.float64(34.5)]]
+intersect
+0.927906861596253
+mean intersection over union
+0.8389444369188709
+testImages/images/a_gp_3_ef_07_jpg.rf.ae06dce1ae86c76a2d6271e8ef7d61da.jpg
+actual coordinates
+[[5.000000000000002, 3.5000000000000018, 28.2, 29.7]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(5.5), np.float64(3.0), np.float64(27.0), np.float64(30.0)]]
+intersect
+0.9050041405418194
+mean intersection over union
+0.8403499625278699
+testImages/images/a_gp_3_ef_11_jpg.rf.dfda2527dbfbdf2d01bcfb0e9ffc375d.jpg
+actual coordinates
+[[6.28, 2.754999999999998, 33.06, 34.644999999999996]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(7.0), np.float64(2.5), np.float64(32.0), np.float64(34.0)]]
+intersect
+0.9109606262730707
+mean intersection over union
+0.8418210180225616
+testImages/images/a_gp_3_ef_13_jpg.rf.4a809e9342d32b6b1014bf4d33ec8efa.jpg
+actual coordinates
+[[5.599999999999998, 1.7999999999999994, 31.8, 35.099999999999994]]
+faces found
+[1, 0, 0, 0]
+predicted coordinates
+[[np.float64(5.0), np.float64(2.0), np.float64(33.0), np.float64(36.0)]]
+intersect
+0.9089412410332797
+mean intersection over union
+0.8431908184921681
+testImages/images/a_gp_3_ef_15_jpg.rf.f445be86f8a7e0e485e9c597d25d7035.jpg
+actual coordinates
+[[6.064999999999997, 3.875000000000001, 38.595, 42.224999999999994]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(7.5), np.float64(3.0), np.float64(37.0), np.float64(40.0)]]
+intersect
+0.8411844501085736
+mean intersection over union
+0.8431506911244963
+testImages/images/a_gp_3_ef_16_jpg.rf.b957ba411c7a368177b2083e3346fc75.jpg
+actual coordinates
+[[6.899999999999998, 4.1000000000000005, 39.0, 42.50000000000001]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(7.5), np.float64(3.0), np.float64(39.5), np.float64(42.0)]]
+intersect
+0.9296707821956185
+mean intersection over union
+0.8448471634984398
+testImages/images/cover_mov-0036_jpg.rf.bf988da5fa4cad5408e483857df13fec.jpg
+actual coordinates
+[[226.66500000000002, 380.0, 664.295, 1020.86]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(205.5), np.float64(378.25), np.float64(679.5), np.float64(1007.75)]]
+intersect
+0.9035200969200095
+mean intersection over union
+0.8459754891411624
+testImages/images/download_mp4-0000_jpg.rf.9e53e03f38fab868a1314592d6251f52.jpg
+actual coordinates
+[[340.005, 566.9399999999999, 749.915, 1131.1999999999998]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(323.5), np.float64(562.25), np.float64(747.75), np.float64(1125.25)]]
+intersect
+0.9388835769589343
+mean intersection over union
+0.847728471930177
+testImages/images/download_mp4-0000_jpg.rf.a2d2becc42b2c013df339227c7620bc7.jpg
+actual coordinates
+[[231.66999999999993, 216.665, 507.61, 631.935]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(221.5), np.float64(211.5), np.float64(510.75), np.float64(634.5)]]
+intersect
+0.9367478734987733
+mean intersection over union
+0.8493769793666325
+testImages/images/download_mp4-0002_jpg.rf.12e7baf54ab3be998e23d7f2a3b4ebb6.jpg
+actual coordinates
+[[235.00000000000003, 149.995, 449.32000000000005, 448.385]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(212.0), np.float64(126.0), np.float64(474.5), np.float64(460.5)]]
+intersect
+0.7292031186283464
+mean intersection over union
+0.8471920000804819
+testImages/images/download_mp4-0008_jpg.rf.79851f2255a1853df86c4c31b71ba1d9.jpg
+actual coordinates
+[[313.34, 536.66, 818.1799999999998, 1361.82]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(290.0), np.float64(564.6666666666666), np.float64(830.6666666666666), np.float64(1134.3333333333333)]]
+intersect
+0.6585288459488347
+mean intersection over union
+0.8438230151852739
+testImages/images/download_mp4-0008_jpg.rf.a549a757c60c8b400d643ea48fa9d977.jpg
+actual coordinates
+[[145.99999999999997, 287.995, 584.32, 803.4450000000002]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(162.0), np.float64(270.6666666666667), np.float64(581.6666666666666), np.float64(787.3333333333334)]]
+intersect
+0.8987915909853875
+mean intersection over union
+0.8447873761642233
+testImages/images/download_mp4-0010_jpg.rf.fe88edaf0ca2dd968daa3ce95503cc3e.jpg
+actual coordinates
+[[223.33, 123.33500000000008, 837.11, 1166.685]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(222.66666666666666), np.float64(113.33333333333333), np.float64(836.0), np.float64(1188.3333333333333)]]
+intersect
+0.9678402100357834
+mean intersection over union
+0.8469089767482157
+testImages/images/download_mp4-0013_jpg.rf.b200e84451518ca71b3c4d33731900ee.jpg
+actual coordinates
+[[380.0, 450.0, 723.02, 935.76]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(383.0), np.float64(456.0), np.float64(726.0), np.float64(939.0)]]
+intersect
+0.9643909450690105
+mean intersection over union
+0.8489001965502632
+testImages/images/download_mp4-0018_jpg.rf.d4f74eafc3b04f4a15431b707e911c3d.jpg
+actual coordinates
+[[726.665, 396.67, 1021.915, 884.1300000000001]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(719.0), np.float64(399.0), np.float64(1030.0), np.float64(902.0)]]
+intersect
+0.9118500496356926
+mean intersection over union
+0.8499493607683537
+testImages/images/download_mp4-0021_jpg.rf.f8e117db5fd897d0f5d809539475cdc2.jpg
+actual coordinates
+[[88.0, 318.0, 508.84000000000003, 931.5999999999999]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(69.33333333333333), np.float64(306.3333333333333), np.float64(515.3333333333334), np.float64(941.3333333333334)]]
+intersect
+0.911959759683705
+mean intersection over union
+0.8509659246849988
+testImages/images/download_mp4-0022_jpg.rf.152deaebdb43b243cec2aee886228e28.jpg
+actual coordinates
+[[310.0, 306.66499999999996, 850.0799999999999, 1060.0349999999999]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(303.3333333333333), np.float64(282.0), np.float64(861.6666666666666), np.float64(1064.3333333333333)]]
+intersect
+0.9315980717673014
+mean intersection over union
+0.8522664431863263
+testImages/images/download_mp4-0022_jpg.rf.38123859bef1d125a47452719f6b39da.jpg
+actual coordinates
+[[110.00000000000001, 432.0, 453.88, 952.52]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(117.25), np.float64(547.75), np.float64(468.25), np.float64(997.5)]]
+intersect
+0.6798146846710379
+mean intersection over union
+0.8495291136860835
+testImages/images/download_mp4-0023_jpg.rf.a0af960bccd74bfaf755c2c904e22732.jpg
+actual coordinates
+[[499.99499999999995, 413.3399999999999, 590.5049999999999, 571.7999999999998]]
+faces found
+[2, 0, 1, 0]
+predicted coordinates
+[[np.float64(444.5), np.float64(449.0), np.float64(528.5), np.float64(571.5)], [np.float64(246.0), np.float64(201.5), np.float64(301.0), np.float64(275.0)]]
+intersect
+0.1699104064447146
+mean intersection over union
+0.8389100713854372
+testImages/images/download_mp4-0026_jpg.rf.4004dbaf456dfd6ee78f02f10aadc230.jpg
+actual coordinates
+[[196.665, 226.665, 440.815, 601.935]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(189.25), np.float64(221.25), np.float64(447.5), np.float64(598.0)]]
+intersect
+0.9229655362593747
+mean intersection over union
+0.8402032323834978
+testImages/images/download_mp4-0030_jpg.rf.17893aaff21c9a95cdfb1ad3bcaee0ee.jpg
+actual coordinates
+[[196.66500000000013, 103.3400000000002, 959.215, 1247.62]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(192.5), np.float64(100.25), np.float64(971.5), np.float64(1243.5)]]
+intersect
+0.9728378117097644
+mean intersection over union
+0.8422128472217746
+testImages/images/download_mp4-0032_jpg.rf.11b490a508f53b0ce35d8ad966b3cf97.jpg
+actual coordinates
+[[98.33000000000006, 383.34000000000003, 400.97, 854.3000000000001]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(91.33333333333333), np.float64(377.3333333333333), np.float64(418.6666666666667), np.float64(781.0)]]
+intersect
+0.7803460217086191
+mean intersection over union
+0.8412894617663543
+testImages/images/download_mp4-0034_jpg.rf.71b46351b65d0a6fcac4a1756b2c0eab.jpg
+actual coordinates
+[[466.67, 489.9949999999999, 980.6300000000001, 1268.3449999999998]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(452.75), np.float64(515.75), np.float64(999.25), np.float64(1203.25)]]
+intersect
+0.8367200301140896
+mean intersection over union
+0.8412222642420563
+testImages/images/download_mp4-0058_jpg.rf.a8f6c0ae94f59ee94ac6931697cb29fa.jpg
+actual coordinates
+[[194.99999999999997, 291.66499999999996, 498.96000000000004, 697.715]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(190.25), np.float64(271.0), np.float64(513.75), np.float64(695.75)]]
+intersect
+0.890307473724714
+mean intersection over union
+0.8419336440896309
+testImages/images/download_mp4-0081_jpg.rf.2ccb78ef480d90d0436fd8bb53f41194.jpg
+actual coordinates
+[[214.99999999999997, 309.995, 394.74, 485.845]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(216.0), np.float64(308.0), np.float64(394.0), np.float64(497.0)]]
+intersect
+0.9224433010830355
+mean intersection over union
+0.8430837820466796
+testImages/images/download_mp4-0139_jpg.rf.db8dd20b9a0c9938a25167fb922a508b.jpg
+actual coordinates
+[[177.14, 234.28499999999997, 271.2, 349.095]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(173.0), np.float64(234.33333333333334), np.float64(286.0), np.float64(348.6666666666667)]]
+intersect
+0.830995789538395
+mean intersection over union
+0.8429135286310699
+testImages/images/download_mp4-0156_jpg.rf.e22e1c913b9a390f2f6526a557b7cc82.jpg
+actual coordinates
+[[158.335, 308.33500000000004, 430.0449999999999, 698.865]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(151.0), np.float64(308.0), np.float64(428.0), np.float64(703.0)]]
+intersect
+0.9556743623336982
+mean intersection over union
+0.8444796513213841
+testImages/images/download_mp4-0166_jpg.rf.160a70b1c4799ea31ad5f96abaca67da.jpg
+actual coordinates
+[[143.33499999999998, 273.33000000000004, 389.56499999999994, 635.25]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(121.0), np.float64(317.6666666666667), np.float64(402.3333333333333), np.float64(627.0)]]
+intersect
+0.7625213170764945
+mean intersection over union
+0.8433569344139199
+testImages/images/v0911dg40001c90i6trc77u9hiq05fk0_008_jpg.rf.f6abeab55999a6d8511eb773938286e5.jpg
+actual coordinates
+[[142.35499999999993, 149.7049999999999, 507.32499999999993, 689.7149999999999]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(129.0), np.float64(142.75), np.float64(526.75), np.float64(687.5)]]
+intersect
+0.9027341389967348
+mean intersection over union
+0.8441593290704444
+testImages/images/v0911dg40001cb3iitrc77u69u3kl8l0_005_jpg.rf.64683f9ffa40ff64f45f99824f623bd9.jpg
+actual coordinates
+[[377.00000000000006, 472.0, 943.0000000000001, 1358.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(379.25), np.float64(597.0), np.float64(950.25), np.float64(1357.0)]]
+intersect
+0.8452707636254572
+mean intersection over union
+0.8441741481978446
+testImages/images/v0911dg40001ccdrp2rc77uak25r81vg_001_jpg.rf.2b2bc46406d921f116039dff1ca8a24a.jpg
+actual coordinates
+[[189.99999999999997, 13.000000000000043, 590.0, 659.0]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(157.66666666666666), np.float64(0.0), np.float64(638.3333333333334), np.float64(665.6666666666666)]]
+intersect
+0.8079664359861591
+mean intersection over union
+0.8436977309319014
+testImages/images/v0911dg40001ccdrp2rc77uak25r81vg_004_jpg.rf.37791490b9d0d8cdb27254b30d0045a7.jpg
+actual coordinates
+[[106.40499999999996, 2.4049999999999727, 490.995, 606.495]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(127.75), np.float64(264.0), np.float64(545.0), np.float64(765.25)]]
+intersect
+0.39311829461960407
+mean intersection over union
+0.8378460499408326
+testImages/images/v0911dg40001cchk0irc77u3chspil10_018_jpg.rf.5e3183582f463427ad644aad3cfd1982.jpg
+actual coordinates
+[[33.5, 898.945, 200.5, 1141.4950000000001]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(21.5), np.float64(886.25), np.float64(219.75), np.float64(1146.5)]]
+intersect
+0.7860366325875143
+mean intersection over union
+0.8371818266414309
+testImages/images/v0911dg40001cf294nbc77u4r2rphh4g_014_jpg.rf.e6814e16c9920e976f0448bbd82e6277.jpg
+actual coordinates
+[[324.34499999999997, 220.17000000000007, 610.335, 642.29]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(313.25), np.float64(203.5), np.float64(617.25), np.float64(642.0)]]
+intersect
+0.9046993505785597
+mean intersection over union
+0.8380364788431667
+testImages/images/v0911dg40001cf2cburc77u9el2h5k0g_014_jpg.rf.f90a39d17d151ee17f8427996d51a570.jpg
+actual coordinates
+[[113.0, 444.5, 161.99999999999997, 515.5]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(108.0), np.float64(438.5), np.float64(164.5), np.float64(509.0)]]
+intersect
+0.7382361228515071
+mean intersection over union
+0.8367889743932709
+testImages/images/v0911dg40001cfb5fljc77u4r2rpll10_016_jpg.rf.6378c8a81d87986df4a35d5032d69968.jpg
+actual coordinates
+[[492.36999999999995, 150.67000000000004, 618.35, 321.39]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(485.0), np.float64(125.66666666666667), np.float64(627.0), np.float64(338.6666666666667)]]
+intersect
+0.7125353114175546
+mean intersection over union
+0.8352549785540645
+testImages/images/v0911dg40001cg3uaa3c77u755ogsheg_016_jpg.rf.b39e8720f89b0f153f1c22237dd16bea.jpg
+actual coordinates
+[[414.50000000000006, 74.22500000000004, 638.1400000000001, 441.03499999999997]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(405.0), np.float64(83.75), np.float64(648.25), np.float64(429.0)]]
+intersect
+0.8698962500290042
+mean intersection over union
+0.8356774330842467
+testImages/images/v0911dg40001cg8dngbc77ud5dsn7qr0_003_jpg.rf.1028755021d6a83ac15d72dcaf25d436.jpg
+actual coordinates
+[[173.50000000000003, 123.50000000000001, 381.5, 464.28]]
+faces found
+[1, 0, 1, 0]
+predicted coordinates
+[[np.float64(154.0), np.float64(130.5), np.float64(391.0), np.float64(464.5)]]
+intersect
+0.8617617282278027
+mean intersection over union
+0.8359917017004341
+testImages/images/v0911dg40001cgqrtgbc77u0isjo3tm0_001_jpg.rf.bebc85561fa7c19d517ea28db7aa8bb9.jpg
+actual coordinates
+[[425.49999999999994, 437.5, 594.5, 664.5]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(405.3333333333333), np.float64(429.3333333333333), np.float64(601.0), np.float64(669.3333333333334)]]
+intersect
+0.8177790280610453
+mean intersection over union
+0.835774884157108
+testImages/images/v0911dg40001ch3gtmjc77ud5dsuqr6g_019_jpg.rf.c00934e7ba0f066275679d58f31be54f.jpg
+actual coordinates
+[[345.61, 112.42499999999998, 575.47, 454.8950000000001]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(312.25), np.float64(72.75), np.float64(609.25), np.float64(457.0)]]
+intersect
+0.690682718882971
+mean intersection over union
+0.834067917506824
+testImages/images/v0911dg40001chojtnvog65nhal6l42g_009_jpg.rf.af770186721093d7811e5cd10952c363.jpg
+actual coordinates
+[[136.0, 1273.0, 300.99999999999994, 1516.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(244.0), np.float64(953.5), np.float64(401.0), np.float64(1175.0)]]
+intersect
+0.0
+mean intersection over union
+0.8243694533497679
+testImages/images/v0911dg40001ci6dnivog65rvtqrr070_008_jpg.rf.af6bd79cd401a7df55d01c254555a6f5.jpg
+actual coordinates
+[[285.0899999999999, 11.49499999999998, 801.53, 802.745]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(270.0), np.float64(1.5), np.float64(831.0), np.float64(806.0)]]
+intersect
+0.9055665785270747
+mean intersection over union
+0.8253027536391622
+testImages/images/v0911dg40001ci6dnivog65rvtqrr070_012_jpg.rf.831d50905c1e81c4632cbcc6de4aa421.jpg
+actual coordinates
+[[353.0, 3.999999999999986, 866.2999999999998, 755.9]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(317.0), np.float64(0.0), np.float64(902.5), np.float64(748.0)]]
+intersect
+0.8642206599653316
+mean intersection over union
+0.8257450025746867
+testImages/images/v0911dg40001cihmm3vog65rvtqun5dg_017_jpg.rf.0b4b70841e2fbb07da2c5fff05051238.jpg
+actual coordinates
+[[161.91499999999994, 98.33500000000002, 320.66499999999996, 329.08500000000004]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(221.25), np.float64(282.5), np.float64(371.75), np.float64(485.0)]]
+intersect
+0.07575614154300886
+mean intersection over union
+0.8173181614394994
+testImages/images/v0911dg40001cihmm3vog65rvtqun5dg_025_jpg.rf.414c6fc928d4bee41a0016ab96092868.jpg
+actual coordinates
+[[177.17500000000004, 108.02999999999999, 320.465, 321.21000000000004]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(172.0), np.float64(103.0), np.float64(310.0), np.float64(318.0)]]
+intersect
+0.8635291167454265
+mean intersection over union
+0.8178316164984542
+testImages/images/Yukio_Hatoyama_0001_jpg.rf.e8577203be4115ccdccc838028503bb3.jpg
+actual coordinates
+[[179.50000000000003, 146.0, 422.5, 479.0]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(180.75), np.float64(166.75), np.float64(428.0), np.float64(484.25)]]
+intersect
+0.8996624407052882
+mean intersection over union
+0.8187308563249028
+testImages/images/Yuri_Malenchenko_0001_jpg.rf.9283afa23881bc6a76b55e8736df810b.jpg
+actual coordinates
+[[181.74999999999997, 158.25, 486.25, 476.75]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(191.25), np.float64(168.25), np.float64(442.25), np.float64(471.25)]]
+intersect
+0.7848597312187363
+mean intersection over union
+0.8183626919215748
+testImages/images/Yusuf_Misbac_0001_jpg.rf.928695e25eb4958c89362a069bcf1640.jpg
+actual coordinates
+[[238.25000000000003, 153.75, 450.75, 472.25], [290.74999999999994, 0.25000000000000355, 495.25, 164.75], [3.000000000000007, 0.0, 203.0, 274.0]]
+faces found
+[0, 2, 2, 2]
+predicted coordinates
+[[np.float64(2.6666666666666665), np.float64(0.0), np.float64(201.66666666666666), np.float64(280.3333333333333)], [np.float64(213.66666666666666), np.float64(167.66666666666666), np.float64(455.6666666666667), np.float64(480.6666666666667)]]
+intersect
+0.0
+intersect
+0.0
+intersect
+0
+mean intersection over union
+0.7925196595451041
+testImages/images/Yu_Shyi-kun_0001_jpg.rf.7ed37233d3993bce57405a0df3f79327.jpg
+actual coordinates
+[[192.5, 98.25, 492.5, 499.74999999999994]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(184.5), np.float64(107.5), np.float64(483.75), np.float64(493.75)]]
+intersect
+0.9108519684025417
+mean intersection over union
+0.7937522877623691
+testImages/images/Yu_Shyi-kun_0003_jpg.rf.df950795b0bfe0ae253d148de5087044.jpg
+actual coordinates
+[[207.25, 169.0, 437.75, 501.99999999999994]]
+faces found
+[2, 1, 2, 1]
+predicted coordinates
+[[np.float64(94.5), np.float64(78.5), np.float64(284.75), np.float64(306.5)], [np.float64(76.0), np.float64(62.75), np.float64(223.5), np.float64(246.25)]]
+intersect
+0.09861898498798133
+mean intersection over union
+0.7865859650533548
+testImages/images/Yves_Brodeur_0001_jpg.rf.8d9d47f904af5c82e56800843a8d82df.jpg
+actual coordinates
+[[170.75, 184.5, 458.25, 510.5]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(184.33333333333334), np.float64(184.66666666666666), np.float64(436.0), np.float64(504.6666666666667)]]
+intersect
+0.859724717642133
+mean intersection over union
+0.7873322788552811
+testImages/images/Yves_Brodeur_0001_jpg.rf.ed9b910f9ea9f553c52dfb8d95ae759e.jpg
+actual coordinates
+[]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(178.0), np.float64(181.5), np.float64(442.25), np.float64(511.0)]]
+mean intersection over union
+0.7873322788552811
+testImages/images/Zafarullah_Khan_Jamali_0002_jpg.rf.51cefaeb2bf5b28cf00c927236a800c4.jpg
+actual coordinates
+[[215.0, 184.25, 448.0, 465.75]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(218.66666666666666), np.float64(163.0), np.float64(450.6666666666667), np.float64(474.6666666666667)]]
+intersect
+0.880655864911137
+mean intersection over union
+0.7882749413406938
+testImages/images/Zakia_Hakki_0001_jpg.rf.a0d73b3563df236a050774a47d075f75.jpg
+actual coordinates
+[[92.5, 154.00000000000003, 415.5, 488.0]]
+faces found
+[0, 0, 1, 0]
+predicted coordinates
+[[np.float64(179.0), np.float64(164.0), np.float64(397.0), np.float64(480.0)]]
+intersect
+0.6396075179657269
+mean intersection over union
+0.786788267106944
+testImages/images/Zhang_Wenkang_0001_jpg.rf.d57c55dcfaf5237641671ec21f346a1d.jpg
+actual coordinates
+[[197.24999999999997, 153.5, 450.75, 491.5]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(195.33333333333334), np.float64(145.66666666666666), np.float64(443.6666666666667), np.float64(487.0)]]
+intersect
+0.9312605012861367
+mean intersection over union
+0.7882186852671341
+testImages/images/Zhang_Ziyi_0004_jpg.rf.1a935daa57d167c85fc2f3d8850c08f8.jpg
+actual coordinates
+[]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(209.5), np.float64(226.5), np.float64(451.75), np.float64(510.0)]]
+mean intersection over union
+0.7882186852671341
+testImages/images/Zhong_Nanshan_0001_jpg.rf.7fd20f72eff2a9dc2cf6de40ebab4f32.jpg
+actual coordinates
+[[174.00000000000003, 207.24999999999997, 443.0, 493.75]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(196.66666666666666), np.float64(191.66666666666666), np.float64(436.3333333333333), np.float64(488.0)]]
+intersect
+0.833272003479075
+mean intersection over union
+0.7886603844652904
+testImages/images/Zhu_Rongji_0007_jpg.rf.29be975499cce7b76f48742c5d000c05.jpg
+actual coordinates
+[[215.49999999999997, 173.75, 435.5, 455.25]]
+faces found
+[1, 1, 1, 1]
+predicted coordinates
+[[np.float64(205.75), np.float64(170.25), np.float64(443.5), np.float64(463.5)]]
+intersect
+0.8886911884416412
+mean intersection over union
+0.7896315573194297
+testImages/images/Zhu_Rongji_0008_jpg.rf.f6a16e12b237fd026e9ade1615df4b7b.jpg
+actual coordinates
+[]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(213.33333333333334), np.float64(178.0), np.float64(451.0), np.float64(471.6666666666667)]]
+mean intersection over union
+0.7896315573194297
+testImages/images/Zinedine_Zidane_0002_jpg.rf.bcbefc29fbbcfe0739baf7a16d68368a.jpg
+actual coordinates
+[[181.50000000000003, 135.49999999999997, 430.5, 492.5]]
+faces found
+[0, 1, 1, 1]
+predicted coordinates
+[[np.float64(199.33333333333334), np.float64(150.33333333333334), np.float64(441.6666666666667), np.float64(483.3333333333333)]]
+intersect
+0.831748835313509
+mean intersection over union
+0.7900365311462958
