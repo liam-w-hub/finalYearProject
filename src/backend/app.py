@@ -4,9 +4,9 @@ import numpy as np
 import cv2
 
 app = Flask(__name__)
-face_model = YOLO("faceBestA.pt")
-plate_model = YOLO("plateBestA.pt")
-#faceModels = ['faceBestA.pt', 'faceBestB.pt', 'faceBestC.pt', 'faceBestB.pt']
+#face_model = YOLO("faceBestA.pt")
+#plate_model = YOLO("plateBestA.pt")
+faceModels = ['faceBestA.pt', 'faceBestB.pt', 'faceBestC.pt', 'faceBestB.pt']
 #plateModels = ['plateBestA.pt', 'plateBestB.pt', 'plateBestC.pt', 'plateBestD.pt']
 
 @app.after_request
@@ -33,9 +33,16 @@ def detect():
     if img is None:
         return jsonify({"error": "invalid image"}), 400
 
-    face_results = face_model.predict(img, conf=0.5, verbose=False)
-    plate_results = plate_model.predict(img, conf=0.5, verbose=False)
+    #face_results = face_model.predict(img, conf=0.5, verbose=False)
+    #plate_results = plate_model.predict(img, conf=0.5, verbose=False)
 
+    face_detected, final_result = facePredict(img)
+
+    return jsonify({"face_detected": face_detected,
+                    "final_result": final_result
+                    })
+
+    '''
     boxes = []
     # faces
     for (x1, y1, x2, y2) in face_results[0].boxes.xyxy.cpu().numpy().astype(int):
@@ -59,15 +66,16 @@ def detect():
         "height": int(h),
         "boxes": boxes
     })
+    '''
 
 
-def facePredict():
+def facePredict(image):
     resultsArray = []
     facesDetected = []
     for model in faceModels:
         model = YOLO(model)
-        testImage = "C:/Users/liamw/2026-csc1097-wraftel-3-clarkt-26/src/backend/faceTest.jpg"
-        results = model.predict(testImage, conf=0.55)
+        #testImage = "C:/Users/liamw/2026-csc1097-wraftel-3-clarkt-26/src/backend/faceTestThree.jpg"
+        results = model.predict(image, conf=0.55)
         num = len(results[0].boxes)
         facesDetected.append(num)
         if (num != 0):
@@ -78,7 +86,7 @@ def facePredict():
     finalImage = plot_bboxes(finalResult)
     cv2.imwrite(f"faceCombined.jpg", finalImage)
 
-    return facesDetected
+    return facesDetected, finalResult
 
 def platePredict():
     count = 1
@@ -94,7 +102,7 @@ def platePredict():
 
 def plot_bboxes(results):
 
-    image = cv2.imread("faceTest.jpg")
+    image = cv2.imread("faceTestThree.jpg")
     for bbox in results:
         image = cv2.rectangle(image, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color=(0, 0, 255), thickness=1)
 
