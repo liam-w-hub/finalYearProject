@@ -48,22 +48,40 @@ export function clearCanvas() {
  * Assumes boxes are already in DISPLAY coordinates.
  * (For now, this is fine for your stub. Later you'll transform from original pixels.)
  */
-export function drawBoxes(boxes = []) {
+export function drawBoxes(boxes = [], selectedBoxIndex = -1) {
   if (!ctx || !canvasEl || !imgEl) return;
 
-  // ✅ Ensure canvas matches displayed image size every time we draw
   const rect = imgEl.getBoundingClientRect();
   canvasEl.width = Math.max(1, Math.round(rect.width));
   canvasEl.height = Math.max(1, Math.round(rect.height));
 
   ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
 
-  ctx.lineWidth = 3;
-  ctx.strokeStyle = "lime";
+  boxes.forEach((b, index) => {
+    const isSelected = index === selectedBoxIndex;
 
-  for (const b of boxes) {
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = isSelected ? "yellow" : "lime";
     ctx.strokeRect(b.x, b.y, b.w, b.h);
-  }
+
+    if (b.label) {
+      ctx.fillStyle = isSelected ? "yellow" : "lime";
+      ctx.font = "14px Arial";
+      ctx.fillText(b.label, b.x, Math.max(12, b.y - 4));
+    }
+
+    // draw resize handle on selected box
+    if (isSelected) {
+      const handleSize = 10;
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(
+        b.x + b.w - handleSize,
+        b.y + b.h - handleSize,
+        handleSize,
+        handleSize
+      );
+    }
+  });
 }
 
 /**

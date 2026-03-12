@@ -26,19 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // Initialize editor
   initEditor({
     getBoxes: () => boxes,
     setBoxes: (newBoxes) => {
       boxes = newBoxes;
     },
-    onChange: (currentBoxes, tempBox) => {
-      drawBoxes(currentBoxes);
-
-      // If dragging, draw temporary preview box
-      if (tempBox) {
-        drawBoxes([...currentBoxes, tempBox]);
-      }
+    onChange: (currentBoxes, selectedBoxIndex) => {
+      drawBoxes(currentBoxes, selectedBoxIndex);
     }
   });
 

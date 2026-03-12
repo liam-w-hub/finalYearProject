@@ -1,28 +1,20 @@
-// frontend/src/ui/editor.js
-
 let canvas = null;
 let img = null;
 
-let boxesRef = null;          // reference to array in main.js
-let onBoxesChanged = null;    // callback to redraw
+let boxesRef = null;
+let onBoxesChanged = null;
 
-let isDrawing = false;
-let startX = 0;
-let startY = 0;
-let tempBox = null;
+let selectedBoxIndex = -1;
+
+let isResizing = false;
+const HANDLE_SIZE = 10;
 
 /**
- * Enable "draw box with mouse" behaviour on the overlay canvas.
- *
- * Requirements in HTML:
- *  - <img id="preview" ...>
- *  - <canvas id="overlay"></canvas>
- *
- * @param {{
- *   getBoxes: () => Array,
- *   setBoxes: (boxes:Array) => void,
- *   onChange?: (boxes:Array, tempBox?:object|null) => void
- * }} opts
+ * Enable editing of existing boxes only.
+ * Current features:
+ * - click box to select
+ * - Delete / Backspace removes selected box
+ * - drag bottom-right handle to resize selected box
  */
 export function initEditor(opts) {
   canvas = document.getElementById("overlay");
@@ -38,78 +30,135 @@ export function initEditor(opts) {
   boxesRef = { get: opts.getBoxes, set: opts.setBoxes };
   onBoxesChanged = typeof opts.onChange === "function" ? opts.onChange : null;
 
-  // Use pointer events so it works with mouse and trackpad consistently
   canvas.addEventListener("pointerdown", handleDown);
   canvas.addEventListener("pointermove", handleMove);
   window.addEventListener("pointerup", handleUp);
+  window.addEventListener("keydown", handleKeyDown);
 }
 
-/** Optional: disable editing later */
 export function destroyEditor() {
   if (!canvas) return;
+
   canvas.removeEventListener("pointerdown", handleDown);
   canvas.removeEventListener("pointermove", handleMove);
   window.removeEventListener("pointerup", handleUp);
+  window.removeEventListener("keydown", handleKeyDown);
+
   canvas = null;
   img = null;
   boxesRef = null;
   onBoxesChanged = null;
+  selectedBoxIndex = -1;
+  isResizing = false;
 }
 
 function handleDown(e) {
-  if (!canvas) return;
-
-  // Only draw if left-click / primary pointer
-  if (e.button !== 0) return;
+  if (!canvas || e.button !== 0) return;
 
   const { x, y } = getCanvasPoint(e);
-  isDrawing = true;
-  startX = x;
-  startY = y;
-  tempBox = { x, y, w: 0, h: 0 };
+  const boxes = boxesRef.get();
 
-  canvas.setPointerCapture?.(e.pointerId);
+  // if selected box exists and user clicked its resize handle, begin resizing
+  if (selectedBoxIndex !== -1) {
+    const selectedBox = boxes[selectedBoxIndex];
+    if (selectedBox && isPointInResizeHandle(selectedBox, x, y)) {
+      isResizing = true;
+      canvas.setPointerCapture?.(e.pointerId);
+      return;
+    }
+  }
 
-  if (onBoxesChanged) onBoxesChanged(boxesRef.get(), tempBox);
+  // otherwise just select a box
+  selectedBoxIndex = findBoxAtPoint(boxes, x, y);
+
+  if (onBoxesChanged) {
+    onBoxesChanged(boxes, selectedBoxIndex);
+  }
 }
 
 function handleMove(e) {
-  if (!isDrawing || !canvas) return;
+  if (!isResizing || selectedBoxIndex === -1 || !boxesRef) return;
 
   const { x, y } = getCanvasPoint(e);
+  const boxes = boxesRef.get();
+  const box = boxes[selectedBoxIndex];
+  if (!box) return;
 
-  const left = Math.min(startX, x);
-  const top = Math.min(startY, y);
-  const w = Math.abs(x - startX);
-  const h = Math.abs(y - startY);
+  // resize from bottom-right corner
+  const newW = Math.max(5, x - box.x);
+  const newH = Math.max(5, y - box.y);
 
-  tempBox = { x: left, y: top, w, h };
+  const updatedBox = {
+    ...box,
+    w: newW,
+    h: newH,
+  };
 
-  if (onBoxesChanged) onBoxesChanged(boxesRef.get(), tempBox);
+  const newBoxes = boxes.map((b, index) =>
+    index === selectedBoxIndex ? updatedBox : b
+  );
+
+  boxesRef.set(newBoxes);
+
+  if (onBoxesChanged) {
+    onBoxesChanged(newBoxes, selectedBoxIndex);
+  }
 }
 
-function handleUp(e) {
-  if (!isDrawing) return;
+function handleUp() {
+  isResizing = false;
+}
 
-  isDrawing = false;
+function handleKeyDown(e) {
+  if (selectedBoxIndex === -1 || !boxesRef) return;
 
-  // Finalise: only add if it’s not tiny
-  if (tempBox && tempBox.w >= 5 && tempBox.h >= 5) {
-    const current = boxesRef.get();
-    boxesRef.set([...current, { ...tempBox, label: "manual" }]);
+  if (e.key === "Delete" || e.key === "Backspace") {
+    e.preventDefault();
+
+    const boxes = boxesRef.get();
+    const newBoxes = boxes.filter((_, index) => index !== selectedBoxIndex);
+
+    boxesRef.set(newBoxes);
+    selectedBoxIndex = -1;
+
+    if (onBoxesChanged) {
+      onBoxesChanged(newBoxes, selectedBoxIndex);
+    }
   }
+}
 
-  tempBox = null;
+function findBoxAtPoint(boxes, x, y) {
+  for (let i = boxes.length - 1; i >= 0; i--) {
+    const box = boxes[i];
+    if (
+      x >= box.x &&
+      x <= box.x + box.w &&
+      y >= box.y &&
+      y <= box.y + box.h
+    ) {
+      return i;
+    }
+  }
+  return -1;
+}
 
-  if (onBoxesChanged) onBoxesChanged(boxesRef.get(), null);
+function isPointInResizeHandle(box, x, y) {
+  const handleLeft = box.x + box.w - HANDLE_SIZE;
+  const handleTop = box.y + box.h - HANDLE_SIZE;
+
+  return (
+    x >= handleLeft &&
+    x <= box.x + box.w &&
+    y >= handleTop &&
+    y <= box.y + box.h
+  );
 }
 
 function getCanvasPoint(e) {
   const rect = canvas.getBoundingClientRect();
 
-  // Map client coords into canvas coords
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  return { x, y };
+  return {
+    x: e.clientX - rect.left,
+    y: e.clientY - rect.top,
+  };
 }
