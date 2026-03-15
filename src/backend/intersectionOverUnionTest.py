@@ -109,6 +109,6 @@ for image in images:
 		print(intersect)
 		ious.append(intersect)
 
-	miou = sum(ious) / len(ious)
-	print("mean intersection over union")
-	print(miou)
+miou = sum(ious) / len(ious)
+print("mean intersection over union")
+print(miou)
