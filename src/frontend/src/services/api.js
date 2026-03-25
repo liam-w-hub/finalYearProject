@@ -27,6 +27,19 @@ export async function detectImage(file) {
  * Sends user-confirmed bounding boxes for blurring.
  * Expected to return a blurred image.
  */
-export async function blurImage(imageId, boxes) {
-  // Backend not implemented yet
+export async function blurImage(file, boxes) {
+  const form = new FormData();
+  form.append("image", file);
+  form.append("boxes", JSON.stringify(boxes));
+
+  const res = await fetch(`${API_BASE}/blur`, {
+    method: "POST",
+    body: form,
+  });
+
+  if (!res.ok) {
+    throw new Error(`Blur failed: ${res.status}`);
+  }
+
+  return await res.blob();
 }
