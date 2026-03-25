@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* light grey */
+}
+
+/* Header */
+header {
+  background-color: #d32f2f; /* red */
+  color: white;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Main layout */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Image */
+#preview {
+  max-width: 700px;
+  display: none;
+}
+
+/* Canvas overlay */
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: crosshair;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+/* Output box */
+#output {
+  margin-top: 20px;
+  text-align: left;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  overflow-x: auto;
+}
