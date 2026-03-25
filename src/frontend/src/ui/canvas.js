@@ -70,10 +70,20 @@ export function drawBoxes(boxes = [], selectedBoxIndex = -1) {
       ctx.fillText(b.label, b.x, Math.max(12, b.y - 4));
     }
 
-    // draw resize handle on selected box
+    // draw resize handles on selected box
     if (isSelected) {
       const handleSize = 10;
       ctx.fillStyle = "yellow";
+
+      // top-left handle
+      ctx.fillRect(
+        b.x,
+        b.y,
+        handleSize,
+        handleSize
+      );
+
+      // bottom-right handle
       ctx.fillRect(
         b.x + b.w - handleSize,
         b.y + b.h - handleSize,

@@ -7,6 +7,7 @@ let onBoxesChanged = null;
 let selectedBoxIndex = -1;
 
 let isResizing = false;
+let resizeMode = null; // "topLeft" or "bottomRight"
 const HANDLE_SIZE = 10;
 
 /**
@@ -58,11 +59,20 @@ function handleDown(e) {
   const { x, y } = getCanvasPoint(e);
   const boxes = boxesRef.get();
 
-  // if selected box exists and user clicked its resize handle, begin resizing
+  // if selected box exists and user clicked one of its resize handles, begin resizing
   if (selectedBoxIndex !== -1) {
     const selectedBox = boxes[selectedBoxIndex];
-    if (selectedBox && isPointInResizeHandle(selectedBox, x, y)) {
+
+    if (selectedBox && isPointInTopLeftHandle(selectedBox, x, y)) {
       isResizing = true;
+      resizeMode = "topLeft";
+      canvas.setPointerCapture?.(e.pointerId);
+      return;
+    }
+
+    if (selectedBox && isPointInBottomRightHandle(selectedBox, x, y)) {
+      isResizing = true;
+      resizeMode = "bottomRight";
       canvas.setPointerCapture?.(e.pointerId);
       return;
     }
@@ -84,15 +94,25 @@ function handleMove(e) {
   const box = boxes[selectedBoxIndex];
   if (!box) return;
 
-  // resize from bottom-right corner
-  const newW = Math.max(5, x - box.x);
-  const newH = Math.max(5, y - box.y);
+  let updatedBox = { ...box };
 
-  const updatedBox = {
-    ...box,
-    w: newW,
-    h: newH,
-  };
+  if (resizeMode === "bottomRight") {
+    updatedBox.w = Math.max(5, x - box.x);
+    updatedBox.h = Math.max(5, y - box.y);
+  }
+
+  if (resizeMode === "topLeft") {
+    const right = box.x + box.w;
+    const bottom = box.y + box.h;
+
+    const newX = Math.min(x, right - 5);
+    const newY = Math.min(y, bottom - 5);
+
+    updatedBox.x = newX;
+    updatedBox.y = newY;
+    updatedBox.w = right - newX;
+    updatedBox.h = bottom - newY;
+  }
 
   const newBoxes = boxes.map((b, index) =>
     index === selectedBoxIndex ? updatedBox : b
@@ -107,6 +127,7 @@ function handleMove(e) {
 
 function handleUp() {
   isResizing = false;
+  resizeMode = null;
 }
 
 function handleKeyDown(e) {
@@ -142,7 +163,16 @@ function findBoxAtPoint(boxes, x, y) {
   return -1;
 }
 
-function isPointInResizeHandle(box, x, y) {
+function isPointInTopLeftHandle(box, x, y) {
+  return (
+    x >= box.x &&
+    x <= box.x + HANDLE_SIZE &&
+    y >= box.y &&
+    y <= box.y + HANDLE_SIZE
+  );
+}
+
+function isPointInBottomRightHandle(box, x, y) {
   const handleLeft = box.x + box.w - HANDLE_SIZE;
   const handleTop = box.y + box.h - HANDLE_SIZE;
 
