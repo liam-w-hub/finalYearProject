@@ -37,6 +37,10 @@ export function initEditor(opts) {
   window.addEventListener("keydown", handleKeyDown);
 }
 
+/**
+ * Cleans up all event listeners and resets editor state.
+ * Should be called when the editor is no longer needed.
+ */
 export function destroyEditor() {
   if (!canvas) return;
 
@@ -53,6 +57,10 @@ export function destroyEditor() {
   isResizing = false;
 }
 
+/**
+ * Handles pointer down events.
+ * Determines whether to start resizing or select a box.
+ */
 function handleDown(e) {
   if (!canvas || e.button !== 0) return;
 
@@ -86,6 +94,13 @@ function handleDown(e) {
   }
 }
 
+/**
+ * Handles pointer movement during resizing of a selected box.
+ *
+ * Updates the dimensions and position of the selected bounding box
+ * depending on the active resize mode (top-left or bottom-right).
+ * Ensures a minimum size is maintained to prevent invalid boxes.
+ */
 function handleMove(e) {
   if (!isResizing || selectedBoxIndex === -1 || !boxesRef) return;
 
@@ -125,11 +140,16 @@ function handleMove(e) {
   }
 }
 
+// Stops resizing when pointer is released
 function handleUp() {
   isResizing = false;
   resizeMode = null;
 }
 
+/**
+ * Handles keyboard input for box editing.
+ * Allows deletion of the currently selected box using Delete or Backspace.
+ */
 function handleKeyDown(e) {
   if (selectedBoxIndex === -1 || !boxesRef) return;
 
@@ -148,6 +168,12 @@ function handleKeyDown(e) {
   }
 }
 
+/**
+ * Finds the index of the top-most box that contains the given point.
+ *
+ * Iterates in reverse order to prioritise boxes drawn later (on top).
+ * Returns -1 if no box contains the point.
+ */
 function findBoxAtPoint(boxes, x, y) {
   for (let i = boxes.length - 1; i >= 0; i--) {
     const box = boxes[i];

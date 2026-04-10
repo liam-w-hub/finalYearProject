@@ -1,3 +1,15 @@
+/**
+ * Main Frontend Controller
+ * ------------------------
+ * Coordinates interaction between UI components and backend services.
+ *
+ * Responsibilities:
+ * - Handles image upload and state management
+ * - Triggers detection and blur API calls
+ * - Updates UI elements (buttons, canvas, messages)
+ * - Maintains current bounding box state
+ */
+
 import { detectImage, blurImage } from "./services/api.js";
 import { initUpload } from "./ui/upload.js";
 import { initCanvas, drawBoxes } from "./ui/canvas.js";
@@ -8,6 +20,7 @@ let boxes = [];
 let imageWidth = null;
 let imageHeight = null;
 
+// Initialise application once DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   const detectBtn = document.getElementById("detectBtn");
   const confirmBtn = document.getElementById("confirmBtn");
@@ -18,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initCanvas();
 
+  // Initialise file upload handling and reset state on new file
   initUpload({
     onFileSelected: (file) => {
       selectedFile = file;
@@ -43,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Handles object detection request to backend
   detectBtn.addEventListener("click", async () => {
     if (!selectedFile) return;
 
@@ -74,13 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       drawBoxes(boxes);
       confirmBtn.disabled = boxes.length === 0;
-      output.textContent = JSON.stringify(result, null, 2);
+      if (boxes.length > 0) {
+        output.textContent = `Detected ${boxes.length} object(s)`;
+      } else {
+        output.textContent = "No objects detected";
+      }
     } catch (err) {
       console.error(err);
       output.textContent = "Detection failed";
     }
   });
 
+  // Handles blur request and updates preview image
   confirmBtn.addEventListener("click", async () => {
     if (!selectedFile || boxes.length === 0) return;
 
