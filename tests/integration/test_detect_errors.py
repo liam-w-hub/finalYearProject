@@ -1,7 +1,4 @@
-# tests/integration/test_detect_errors.py
-
 import io
-
 
 def test_detect_missing_image(client):
     response = client.post(

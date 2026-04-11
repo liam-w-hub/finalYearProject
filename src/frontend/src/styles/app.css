@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2; /* light grey */
-}
-
-/* Header */
-header {
-  background-color: #d32f2f; /* red */
-  color: white;
-  padding: 16px 24px;
-  text-align: center;
-}
-
 header h1 {
   margin: 0;
   font-size: 28px;
@@ -61,4 +47,61 @@ main {
   margin-right: auto;
   font-size: 12px;
   overflow-x: auto;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #c62828;
+  height: 120px;        
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+main {
+  padding: 20px;
+}
+
+.button-row {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #a61f1f;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #bdbdbd;
+  color: #eeeeee;
+  cursor: not-allowed;
+}
+
+.header-logo {
+  height: 200px;  
+  width: auto;    
 }
