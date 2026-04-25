@@ -19,6 +19,7 @@ let selectedFile = null;
 let boxes = [];
 let imageWidth = null;
 let imageHeight = null;
+let blurredImageUrl = null;
 
 // Initialise application once DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmBtn = document.getElementById("confirmBtn");
   const output = document.getElementById("output");
   const preview = document.getElementById("preview");
+  const downloadBtn = document.getElementById("downloadBtn");
 
   console.log("Frontend initialised");
 
@@ -37,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
       selectedFile = file;
       detectBtn.disabled = false;
       confirmBtn.disabled = true;
+      downloadBtn.disabled = true;
+      blurredImageUrl = null;
 
       boxes = [];
       imageWidth = null;
@@ -109,9 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const blurredBlob = await blurImage(selectedFile, boxes);
-      const blurredUrl = URL.createObjectURL(blurredBlob);
+      blurredImageUrl = URL.createObjectURL(blurredBlob);
 
-      preview.src = blurredUrl;
+      preview.src = blurredImageUrl;
+      downloadBtn.disabled = false;
       boxes = [];
       drawBoxes([]);
       output.textContent = "Blur complete";
@@ -120,5 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
       output.textContent = "Blur failed";
       confirmBtn.disabled = false;
     }
+  });
+  
+  downloadBtn.addEventListener("click", () => {
+    if (!blurredImageUrl) return;
+
+    const link = document.createElement("a");
+    link.href = blurredImageUrl;
+    link.download = "smart-blur-output.jpg";
+    link.click();
   });
 });
