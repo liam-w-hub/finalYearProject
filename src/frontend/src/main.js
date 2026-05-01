@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const output = document.getElementById("output");
   const preview = document.getElementById("preview");
   const downloadBtn = document.getElementById("downloadBtn");
+  //const blurStrength = document.getElementById("blurStrength").value;
 
   console.log("Frontend initialised");
 
@@ -108,11 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
   confirmBtn.addEventListener("click", async () => {
     if (!selectedFile || boxes.length === 0) return;
 
+    const blurStrength = document.getElementById("blurStrength").value;
+
     output.textContent = "Applying blur...";
     confirmBtn.disabled = true;
 
     try {
-      const blurredBlob = await blurImage(selectedFile, boxes);
+      const blurredBlob = await blurImage(selectedFile, boxes, blurStrength);
       blurredImageUrl = URL.createObjectURL(blurredBlob);
 
       preview.src = blurredImageUrl;
