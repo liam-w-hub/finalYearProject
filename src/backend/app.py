@@ -6,10 +6,9 @@ import json
 import io
 
 app = Flask(__name__)
-#face_model = YOLO("faceBestA.pt")
-#plate_model = YOLO("plateBestA.pt")
-faceModels = ['faceBestA.pt', 'faceBestB.pt', 'faceBestC.pt', 'faceBestB.pt']
-plateModels = ['plateBestA.pt', 'plateBestB.pt', 'plateBestC.pt', 'plateBestD.pt']
+
+faceModels = ['faceBestDLr.pt']
+plateModels = ['plateBestD.pt']
 
 @app.after_request
 def add_cors_headers(resp):
@@ -17,11 +16,6 @@ def add_cors_headers(resp):
     resp.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS"
     resp.headers["Access-Control-Allow-Headers"] = "Content-Type"
     return resp
-#@app.route('/')
-#def main():
-    #message = facePredict()
-    #message = platePredict()
-    #return message
 
 @app.route("/detect", methods=["POST"])
 def detect():
@@ -34,9 +28,6 @@ def detect():
 
     if img is None:
         return jsonify({"error": "invalid image"}), 400
-
-    #face_results = face_model.predict(img, conf=0.5, verbose=False)
-    #plate_results = plate_model.predict(img, conf=0.5, verbose=False)
 
     face_detected, final_result = facePredict(img)
     plate_detected, plate_result = platePredict(img)
@@ -77,6 +68,7 @@ def detect():
 
 @app.route("/blur", methods=["POST"])
 def blur():
+    print("BLUR ENDPOINT HIT")
     if "image" not in request.files:
         return jsonify({"error": "missing image field"}), 400
 
@@ -96,7 +88,8 @@ def blur():
         return jsonify({"error": "invalid boxes json"}), 400
 
     img_h, img_w = img.shape[:2]
-
+    strength = request.form.get("strength")
+    print(f"strength = '{strength}'")
     for box in boxes:
         x = max(0, int(box["x"]))
         y = max(0, int(box["y"]))
@@ -113,8 +106,17 @@ def blur():
         if roi.size == 0:
             continue
 
-        blurred_roi = cv2.GaussianBlur(roi, (51, 51), 0)
-        img[y:y2, x:x2] = blurred_roi
+        if strength == "lightStrength":
+            blurred_roi = cv2.GaussianBlur(roi, (21, 21), 0)
+            img[y:y2, x:x2] = blurred_roi
+
+        if strength == "mediumStrength":
+            blurred_roi = cv2.GaussianBlur(roi, (51, 51), 0)
+            img[y:y2, x:x2] = blurred_roi
+
+        if strength == "strongStrength":
+            blurred_roi = cv2.GaussianBlur(roi, (101, 101), 0)
+            img[y:y2, x:x2] = blurred_roi
 
     success, buffer = cv2.imencode(".jpg", img)
     if not success:
@@ -128,80 +130,27 @@ def blur():
     )
 
 def facePredict(image):
-    resultsArray = []
-    facesDetected = []
-    for model in faceModels:
-        model = YOLO(model)
-        #testImage = "C:/Users/liamw/2026-csc1097-wraftel-3-clarkt-26/src/backend/faceTestThree.jpg"
-        results = model.predict(image, conf=0.55)
-        num = len(results[0].boxes)
-        facesDetected.append(num)
-        if (num != 0):
-            resultsArray.append(results)
+    # Load the face model and run inference on uploaded image
+    model = YOLO(faceModels[0])
+    # Make prediction keeping those with a confidence score or 0.5 or greater
+    results = model.predict(image, conf=0.5)
+    boxes = results[0].boxes.xyxy.cpu().numpy().astype(np.int32)
+    faceDetected = len(boxes) > 0
 
-    facesCount = max(facesDetected)
-    finalResult = finalBox(resultsArray, facesCount)
-    finalImage = plot_bboxes(finalResult)
-    cv2.imwrite(f"faceCombined.jpg", finalImage)
-
-    return facesDetected, finalResult
+    # return the face(s) detected and their corresponding bounding boxes
+    return faceDetected, boxes
 
 def platePredict(image):
-    resultsArray = []
-    platesDetected = []
-    for model in plateModels:
-        model = YOLO(model)
-        results = model.predict(image, conf=0.5)
-        num = len(results[0].boxes)
-        platesDetected.append(num)
-        if num != 0:
-            resultsArray.append(results)
+    # Load the plate model and run inference on uploaded image
+    model = YOLO(plateModels[0])
+    # Make prediction keeping those with a confidence score or 0.5 or greater
+    results = model.predict(image, conf=0.5)
+    boxes = results[0].boxes.xyxy.cpu().numpy().astype(np.int32)
+    plateDetected = len(boxes) > 0
 
-    if not resultsArray:
-        return platesDetected, []
+    # return the plate(s) detected and their corresponding bounding boxes
+    return plateDetected, boxes
 
-    platesCount = max(platesDetected)
-    finalResult = finalBox(resultsArray, platesCount)
-
-    return platesDetected, finalResult
-
-def plot_bboxes(results):
-
-    image = cv2.imread("faceTestThree.jpg")
-    for bbox in results:
-        image = cv2.rectangle(image, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color=(0, 0, 255), thickness=1)
-
-    return image
-
-def finalBox(resultsArray, facesCount):
-    num = len(resultsArray)
-    coordinates = []
-
-    for i in range(facesCount):
-        bbox0 = 0
-        bbox1 = 0
-        bbox2 = 0
-        bbox3 = 0
-        for results in resultsArray:
-            boxesFound = results[0].boxes.xyxy.numpy().astype(np.int32)
-            boxesFound = sorted(boxesFound, key=lambda x: x[0])
-            bbox0 += boxesFound[i][0]
-            bbox1 += boxesFound[i][1]
-            bbox2 += boxesFound[i][2]
-            bbox3 += boxesFound[i][3]
-
-        bbox0 = bbox0 / num
-        bbox1 = bbox1 / num
-        bbox2 = bbox2 / num
-        bbox3 = bbox3 / num
-
-        box = [bbox0, bbox1, bbox2, bbox3]
-        coordinates.append(box)
-
-    return coordinates
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
-
-#if __name__ == '__main__':
-    #app.run()
