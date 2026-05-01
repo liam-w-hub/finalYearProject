@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawBoxes(boxes);
       confirmBtn.disabled = boxes.length === 0;
       if (boxes.length > 0) {
-        output.textContent = `Detected ${boxes.length} object(s)`;
+        output.textContent = `Detected ${boxes.length} object(s), Click a box to select it, then press Delete on your keyboard to remove it`;
       } else {
         output.textContent = "No objects detected";
       }
