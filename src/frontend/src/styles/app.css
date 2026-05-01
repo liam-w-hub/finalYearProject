@@ -105,3 +105,19 @@ button:disabled {
   height: 200px;  
   width: auto;    
 }
+
+select#blurStrength {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+select#blurStrength option {
+  background-color: white;
+  color: black;
+}
