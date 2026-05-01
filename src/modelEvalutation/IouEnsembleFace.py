@@ -9,7 +9,7 @@ from pycocotools.cocoeval import COCOeval
 import json
 
 # Paths to each trained face detection model for ensemble prediction, models added/removed based on tests
-faceModels = ['faceBestCLr.pt', 'faceBestDLr.pt']
+faceModels = ['faceBestA.pt', 'faceBestB.pt', 'faceBestCLr.pt', 'faceBestDLr.pt']
 
 # Evaluation image set
 path = "faceEvaluation/images/"

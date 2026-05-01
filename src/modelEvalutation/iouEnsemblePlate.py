@@ -9,7 +9,7 @@ from pycocotools.cocoeval import COCOeval
 import json
 
 # Paths to each trained plate detection model for ensemble prediction, models added/removed based on tests
-plateModels = ['plateBestC.pt', 'plateBestD.pt']
+plateModels = ['plateBestA.pt', 'plateBestB.pt', 'plateBestC.pt', 'plateBestD.pt']
 
 # Evaluation image set
 path = "plateEvaluation/images/"
