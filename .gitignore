@@ -1,3 +1,12 @@
 # Created by pytest automatically.
 *.pyc
 .pytest_cache/
+
+src/modelTraining/Face/venv
+src/modelTraining/Plate/venv
+src/modelEvalutation/faceEvaluation.zip
+src/modelEvalutation/plateEvaluation.zip
+src/modelTraining/Face
+src/modelTraining/Plate/*.pt
+src/modelTraining/Plate/*.zip
+src/modelTraining/Plate/runs
